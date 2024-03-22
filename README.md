@@ -1,6 +1,3 @@
-# Kali-net-NetHunter-termux
-
-
 ولاً، تقوم بالاتي بالترتيب الصحيح:
 
 - المتطلبات:
@@ -14,20 +11,30 @@
 
 1. تحديث الحزم:
   
+```shell
    pkg update
    pkg install openssl-tool
+```
 2. تثبيت حزمة wget:
   
+```shell
    pkg install wget
+```
 3. تثبيت حزمة كالي لينكس:
   
+```shell
 wget -O install-nethunter-termux https://offs.ec/2MceZWr
+```
 بعدها 
+```shell
 chmod +x install-nethunter-termux
+```
 بعدها 
 shell
+```shell
 ./install-nethunter-termux
 
+```
 4. اختيار نوع والأداء
 
 NetHunter ARM64 (full): إصدار كامل يتضمن العديد من الأدوات والميزات. يناسب الأشخاص الذين يحتاجون إلى مجموعة كاملة من الأدوات والخيارات.
@@ -49,10 +56,14 @@ NetHunter ARM64 (nano): إصدار صغير جداً يحتوي على عدد ق
 سوف تضهر لك كلمت KILI بخط اخضر كبير هذا يعني انه اشتغل الان اصبح لديك نضام كالي لينكس مبسط بواجهة ترمنال وكل الاوامر سوف تتنفذ في كالي لينكس ارسل مثلا
 
 
-uname
+```shell
+uname```
+
 الا ارسل هذه لكي يعمل كل شيء في نضام كالي
 
-nethunter
+```shell
+nethunter```
+
 يضهر لك انك في نضام كالي
 
 
@@ -63,12 +74,18 @@ RVNC
 
 ونفذ هذه الاوامر بالترتيب
 
+```shell
 nethunter kex &
+```
 وأفتح التطبيق 
 واضغط ال (+) الموجود اسفل الشاشه بعدها يضهر لك مربعين الاول تكتب به 
+```curl
 localhost:5901
+```
 الثاني  تكتب به اي شيء مثلا
-my Test Net hunter
+```text
+my Test Net hunter```
+
 
 تضغط Create 
 بعدها connect
@@ -76,12 +93,18 @@ my Test Net hunter
 
 
 لحل مشكلة
-[Process completed (signal 9) - press Enter]
+```shell
+[Process completed (signal 9) - press Enter]```
+
 ببساطه حمل اولا 
-apt install android-tools
+```shell
+apt install android-tools```
+
 بعدها تضغط y
 بعدها
-adb
+```shell
+adb```
+
 بعدها اذهب للاعدادات> خيارات المطورين>
 
  تصحيح اخطاء. usp  (فعلها) 
@@ -91,7 +114,9 @@ adb
 
 
 بعدها 
-adb pair Yor_Ip
+```shell
+adb pair Yor_Ip```
+
 بعدها يطلب منك رقم تأخذه من كلمة الاتصال عن طريق رمز (الاقتران بواسطة رمز الاقتران) 
 
 تكتب الرمز 
@@ -99,6 +124,7 @@ adb pair Yor_Ip
 
 وبعدها تنفذ هذه الاوامر تنسخها كلها دفعه واحده وتنفذها
 
+```shell
 adb shell "/system/bin/dumpsys activity settings | grep max_phantom_processes"
 
 adb shell "/system/bin/dumpsys activity processes -a"
@@ -107,12 +133,17 @@ adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
 
 adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
 
-adb shell settings put global settings_enable_monitor_phantom_procs false
+adb shell settings put global settings_enable_monitor_phantom_procs false```
+
 
 بعدها افتح الترمنال واكتب
-nh
+```shell
+nh```
+
 وبعدها
-nethunter kex
+```shell
+nethunter kex```
+
 
 بعدين روح للبرنامج وشغله ومبروك عليك الواحه الرسموميه وتضغيل التطبيق 🥱🖤
 
